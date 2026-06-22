@@ -1,0 +1,10 @@
+- name : Deploy Artifact
+  hosts: localhost
+  connection : local
+  
+  tasks : 
+     - name : Copy JAR
+       copy :
+         src : "/target/myapp-1.0-SNAPSHOT.jar"
+         dest : "/tmp/myapp.jar"
+         mode : '0755'
